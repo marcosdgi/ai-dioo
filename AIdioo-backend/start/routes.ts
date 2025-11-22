@@ -7,10 +7,11 @@
 |
 */
 
-import router from '@adonisjs/core/services/router'
 
-router.get('/', async () => {
-  return {
-    hello: 'world',
-  }
-})
+import router from '@adonisjs/core/services/router'
+import user from './routes/auth/user.js'
+
+
+router.group(() => {
+  user
+}).prefix('/api')
