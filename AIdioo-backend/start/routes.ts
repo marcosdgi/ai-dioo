@@ -8,11 +8,5 @@
 */
 
 
-import router from '@adonisjs/core/services/router'
-import user from './routes/auth/user.js'
-import ia from './routes/ia/ia.js'
-
-router.group(() => {
-  user
-  ia
-}).prefix('/api/v1')
+import './routes/auth/user.js'
+import './routes/ia/ia.js'
