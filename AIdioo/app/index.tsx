@@ -1,18 +1,5 @@
-import React from "react";
-import { View, Text } from "react-native";
+import { Redirect } from 'expo-router';
 
-const IndexScreen = () => {
-    return (
-        <View className="flex-1 justify-center items-center bg-slate-100">
-            <Text className="text-2xl font-bold text-blue-600">
-                Aquí estoy yo
-            </Text>
-            <Text className="text-base text-gray-600 mt-2">
-                Tailwind CSS está configurado correctamente
-            </Text>
-        </View>
-    )
+export default function Index() {
+  return <Redirect href="/screens/auth/login" />;
 }
-
-
-export default IndexScreen;
